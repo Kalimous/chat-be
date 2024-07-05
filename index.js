@@ -2,10 +2,12 @@ const { createServer } = require("http");
 const app = require("./app");
 const { Server } = require("socket.io");
 
+// front https://kalimous-chat.netlify.app
+
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
     cors: {
-        origin: "*",
+        origin: "https://kalimous-chat.netlify.app",
     },
 });
 
